@@ -46,7 +46,6 @@ class Comment(Base):
     parent = relationship("Comment", remote_side=[id], back_populates="replies")
     replies = relationship("Comment", back_populates="parent")
 
-# Pydantic models
 class UserBase(BaseModel):
     username: str
     email: str
